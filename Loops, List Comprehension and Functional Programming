@@ -1,0 +1,43 @@
+##For loop, multiples of 3 to 100
+for num in range(1,101):
+    if num % 3 == 0:
+        print(num, end="\t")
+
+##for loop that adds all 4-digit even numbers one after another, printing the intermediate sum for every 100th number
+l = range(1000, 10000, 2)
+sum1 = 0
+for num in range(len(l)):
+    sum1 += l[num]
+    if num % 100 == 99:
+        print(sum1, num)
+print(sum1)
+
+##for loop that iterates over names to find a name that starts with "S" and has the length of 5
+names = ["Alice", "Bob", "Mary", "Sam", "Sarah", "Tom"]
+for name in names:
+    print(name)
+    if name.startswith("S") and len(name) == 5:
+        break
+        
+namesloop = (name, names.index("Sarah"))
+
+##for loop that prints all key-value pairs in states in ascending order of the keys, separated by a space
+states = {"IL": "Illinois", "WI": "Wisconsin", "IA": "Iowa", "NE": "Nebraska", "MN": "Minnesota"}
+for key in sorted(states):
+    print("({}: {})".format(key, states[key]), end=" ")
+
+##create a list of lists, each of which contains any number from l1, any number from l2, and the product of the two numbers
+l1 = list(range(10))
+l2 = list(reversed(l1))
+l1, l2
+listoflists = [[num1, num2, num1*num2] for num1 in l1 for num2 in l2]
+
+##list of tuples, each of which contains the name from names, the age from ages, and the gender from genders at the same index position
+names = ["Alice", "Bob", "Mary", "Sam", "Sarah", "Tom"]
+ages = [30, 25, 27, 31, 39, 34]
+genders = ["female", "male", "female", "male", "female", "male"]
+
+listoftuples = [(name, age, gender) for name, age, gender in zip(names, ages, genders)]
+
+##results from calling the lambda function using map() with input values 0 through 9
+lambdaresults = list(map(lambda x: x**2, range(0,10)))
