@@ -81,3 +81,38 @@ total = 1
 for item in l[0:10]:
     total *= item
 print(total)
+
+##for loop that prints all names in employees except for Mary
+employees = ["Alice", "Bob", "Mary", "Sam", "Sarah", "Tom"]
+
+for name in employees:
+    if name == "Mary":
+        continue
+    else:
+        print(name)
+
+##for loop that prints the names in employees from the beginning but stops when it sees Mary
+for name in employees:
+    if name == "Mary":
+        break
+    else:
+        print(name)
+
+##for loop that adds all numbers in l except for multiples of 5. It should print the final sum after the for loop
+l = range(1, 1000, 2)
+
+num1 = 0
+for num in l:
+    if num % 5 == 0:
+        continue
+    else:
+        num1 += num
+print(num1)
+
+##for loop that adds numbers in l from the beginning but stops when the sum exceeds 1000, printing the current sum and the number last added
+num1 = 0
+for num in l:
+    num1 += num
+    if num1 > 1000:
+        print(num1, num)
+        break
