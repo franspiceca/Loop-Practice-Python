@@ -18,3 +18,32 @@ for char in range(len(s)):
     else:
         print(s[char], end="\t")
 
+##for loop that prints "NAME is SEX and aged AGE." for all tuples in employees, separated by a new line, where NAME is the first value in each tuple, SEX the second, and AGE the thrid
+employees = [("Alice", 30, "female"), ("Bob", 25, "male"), ("Tom", 34, "male")]
+for name, age, sex in employees:
+    print("{} is {} and aged {}".format(name, sex, age))
+
+##for loop that prints "ABBREVIATION is the abbreviation for FULLNAME." for all key-value pairs in states, separated by a new line, where ABBREVIATION is the key in states and FULLNAME the key
+states = {"IA": "Iowa", "IL": "Illinois", "MN": "Minnesota", "NE": "Nebraska", "WI": "Wisconsin"}
+for key, value in states.items():
+    print("{} is the abbreviation for {}".format(key, value))
+
+##for loop that prints all names in names in uppercase, separated by a new line
+names = ["Alice", "Bob", "Mary", "Sam", "Sarah", "Tom"]
+for name in names:
+    print(name.upper())
+
+##for loop that prints the first two characters of each name in names in lowercase, separated by a new line
+for name in names:
+    print(name.lower()[:2])
+
+##for loop that only prints the names in names with a length of 3, separated by a new line
+for name in names:
+    if len(name) == 3:
+        print(name)
+
+##for loop that only prints the names in names that end with either m or y, separated by a new line
+for name in names:
+    if (name.endswith("m") or (name.endswith("y"))):
+        print(name)
+
