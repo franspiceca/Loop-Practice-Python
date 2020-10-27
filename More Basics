@@ -47,3 +47,37 @@ for name in names:
     if (name.endswith("m") or (name.endswith("y"))):
         print(name)
 
+##for loop that prints the pairs of two items that are at the same position in men and women, respectively
+men = ["Bob", "Sam", "Tom"]
+women = ["Alice", "Mary", "Sarah"]
+
+for name1, name2 in list(zip(men, women)):
+    print(name1 + " & " + name2)
+    
+##nested for loop that prints all possible pairs of the two names from men and women, respectively
+for m in men:
+    for w in women:
+        print(m + " & " + w)
+
+##for loop that adds all numbers in l one after another. It should print the final sum after the for loop
+l = range(1, 1000, 2)
+
+total = 0
+for item in l:
+    total += item
+print(total)
+
+##for loop that adds all numbers in l one after another, printing the current sum for every 10th number. It should print the final sum after the for loop
+total = 0
+for item in range(len(l)):
+    total += l[item]
+    if item % 10 == 9:
+        print(total, item)
+        
+print(total)
+
+##for loop that calculates the product of the first 10 numbers in l. It should print the final product after the for loop
+total = 1
+for item in l[0:10]:
+    total *= item
+print(total)
