@@ -1,0 +1,20 @@
+##for loop that prints all integers from 0 to 99, separated by a tab
+for num in range(0, 100):
+    print(num, end="\t")
+    
+##for loop that prints all characters in s, separated by a tab
+s = "abcdefghijklmnopqrstuvwxyz"
+for char in s:
+    print(char, end="\t")
+
+##for loop that prints the same as right above, but this time using the index of s
+for char in range(len(s)):
+    print(s[char], end="\t")
+
+##for loop that prints the same as right above except that the letters at odd index number positions are printed in upper case, while those at even index number positions are printed as they are
+for char in range(len(s)):
+    if char % 2 == 1:
+        print(s[char].upper(), end="\t")
+    else:
+        print(s[char], end="\t")
+
