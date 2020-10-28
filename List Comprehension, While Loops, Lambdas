@@ -1,0 +1,40 @@
+##create a list of squares of the numbers from l
+l = [1, 2, 3, 4, 5]
+
+l2 = [item ** 2 for item in l]
+l2
+
+##create a list of lists, each of which contains the square and cube of each number from l
+[[item ** 2, item ** 3] for item in l]
+
+##create a list of the names from l in lower case
+names = ["Alice", "Bob", "Tom"]
+
+[name.lower() for name in names]
+
+##create a list of tuples, each of which contains each name from l and the length of the name
+[(name, len(name)) for name in names]
+
+##while loop that repeatedly prints the current value of x ane then divides x in half at each iteration and stops when x becomes less than 1
+x = float(1000)
+
+while x >= 1:
+    print(x)
+    x /= 2
+    
+##while loop that interactively asks the user to enter an integer and tells if the number is even or odd. It exits when the user enters "stop"
+while True:
+    num = input("Enter an integar number: ")
+    if num == "stop":
+        break
+    elif:
+        num % 2 == 0:
+            print("Number is even")
+    else:
+        print("Number is odd")
+
+##list of results from taking 7 times every number in the range from 1 to 10 inclusive as a lambda function using the map() function
+list(map(lambda x: x*7, range(1,11)))
+
+##list of all the numbers divisible by 3 in the range from 0 to 30 inclusive as a lambda function using the filter() function
+list(filter(lambda x: x % 3 == 0, range(31)))
